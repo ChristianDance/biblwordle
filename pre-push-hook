@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+# Disable push if latest app version wasn't exported to app folder
+
+make export
+exec git diff --exit-code -- app 
